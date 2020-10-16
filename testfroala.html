@@ -1,21 +1,28 @@
-<!-- OneTrust Privacy Notice start -->
-  <!-- Language Drop-down elements that will control in which language notice is displayed -->
-  <div class="otnotice-language-dropdown-container">
-    <select id="otnotice-language-dropdown"></select>
-  </div>
-    
-  <!-- Container in which the privacy notice will be rendered -->
-  <div id="otnotice-c72acbae-7346-4fef-8828-a161898f6d03" class="otnotice"></div>
-  
-  <script src="https://appdeds545c.blob.core.cloudapi.de/privacy-notice-scripts/otnotice-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-      settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1kZS5vbmV0cnVzdC5jb20vcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9"
-    </script>
-  
-  <script type="text/javascript" charset="UTF-8">
-      // To ensure external settings are loaded, use the Initialized promise:
-      OneTrust.NoticeApi.Initialized.then(function() {
-        OneTrust.NoticeApi.LoadNotices(["https://appdeds545c.blob.core.cloudapi.de/2ec8fd75-7917-4919-84fe-69dd924992db/privacy-notices/c72acbae-7346-4fef-8828-a161898f6d03.json"]);
-      });
-    </script>
-    
-  <!-- OneTrust Privacy Notice end -->
+<!-- OneTrust Privacy Notice Bundle start -->
+
+<!-- Drop-down elements that will control which notice is displayed -->
+<select id="testDropdown"></select>
+
+<!-- Button element that will trigger the notice update -->
+<button id="otnotice-bundle-button">Update</button>
+
+
+<!-- Container in which the privacy notices will be rendered -->
+<div id="otnotice-bundle-container" class="otnotice"></div>
+
+<script src="https://appdeds545c.blob.core.cloudapi.de/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vcHJpdmFjeXBvcnRhbC1kZS5vbmV0cnVzdC5jb20vcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
+    bundleUrl="https://appdeds545c.blob.core.cloudapi.de/2ec8fd75-7917-4919-84fe-69dd924992db/notice-bundles/draft/bdfb1d58-8e00-4f99-b0e8-0471cf6c6660.json";
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+    OneTrust.NoticeManagerApi.Initialized.then(function() {
+        OneTrust.NoticeManagerApi.InitializeOptions(
+            "otnotice-bundle-container",
+            ["testDropdown"],
+            "otnotice-bundle-button"
+        );
+    });
+</script>
+
+<!-- OneTrust Privacy Notice end -->
