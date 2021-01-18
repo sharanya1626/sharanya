@@ -1,28 +1,7 @@
-<html>
-
-
-
-
-
-<head>
-
-
-<title>Privacy Notice Page(callback)</title>
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
-
-</head>
-
-
-<body>
-  <script src="https://cookiesqastorage.blob.core.windows.net/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="7b8ccff2-4149-4e74-af30-d8485aa03f24-test" ></script>
-
 <!-- OneTrust Privacy Notice Bundle start -->
 
 <!-- Drop-down elements that will control which notice is displayed -->
-<select id="okDropdown"></select>
+<select id="testDropdown"></select>
 
 <!-- Button element that will trigger the notice update -->
 <button id="otnotice-bundle-button">Update</button>
@@ -31,25 +10,21 @@
 <!-- Container in which the privacy notices will be rendered -->
 <div id="otnotice-bundle-container" class="otnotice"></div>
 
-<script src="https://cm1dsae9e.blob.core.windows.net/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
-    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vY20xLWRzLmRldi5vdGRldi5vcmcvcmVxdWVzdC92MS9wcml2YWN5Tm90aWNlcy9zdGF0cy92aWV3cyJ9";
-    bundleUrl="https://cm1dsae9e.blob.core.windows.net/6d761727-96cb-48c3-9c06-43f146b35e27/notice-bundles/draft/208a5c4e-6321-4781-b2ef-1ed681adff17.json";
+<script src="https://lkgb-portal-cdn.1trust.app/privacy-notice-scripts/otnotice-bundle-1.0.min.js" type="text/javascript" charset="UTF-8" id="otprivacy-notice-script">
+    settings="eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vbGtnYi1wb3J0YWwuMXRydXN0LmFwcC9yZXF1ZXN0L3YxL3ByaXZhY3lOb3RpY2VzL3N0YXRzL3ZpZXdzIn0=";
+    bundleUrl="https://lkgb-portal-cdn.1trust.app/9eaf9964-c49e-4fca-927a-b4089f7403e0/notice-bundles/draft/cc63eb7a-8b55-4f6b-959b-5f4a93485992.json";
 </script>
 
 <script type="text/javascript" charset="UTF-8">
     OneTrust.NoticeManagerApi.Initialized.then(function() {
         OneTrust.NoticeManagerApi.InitializeOptions(
             "otnotice-bundle-container",
-            ["okDropdown"],
+            ["testDropdown"],
             "otnotice-bundle-button"
         );
     });
 </script>
 
 <!-- OneTrust Privacy Notice end -->
-</body>
-
-
-</html>
 
 
